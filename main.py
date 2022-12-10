@@ -12,6 +12,7 @@ from six import StringIO
 from IPython.display import Image
 from sklearn.tree import export_graphviz
 import pydotplus
+
 st.title("Autism Detection System")
 le = LabelEncoder()
 df = pd.read_csv("dataset.csv")
