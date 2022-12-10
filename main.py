@@ -43,13 +43,7 @@ clf = DecisionTreeClassifier(criterion="entropy", max_depth=3)
 clf = clf.fit(x_train,y_train)
 y_pred = clf.predict(x_test)
 st.write("Accuracy:",metrics.accuracy_score(y_test, y_pred)*100)
-dot_data = StringIO()
-export_graphviz(clf, out_file=dot_data,
-                filled=True, rounded=True,
-                feature_names = x.columns , class_names=['Not Austistic','Austistic'])
-graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
-graph.write_png('entropy.png')
-Image(graph.create_png())
+
 st.subheader("Decision Tree")
 st.image('entropy.png')
 #Train Logistic Regression Classifier
