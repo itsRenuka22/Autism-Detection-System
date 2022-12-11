@@ -164,8 +164,9 @@ if (a=='Yes'):
   arr.append(1)
 else:
   arr.append(0)
-a = log_reg.predict([arr])
-if(a == 1):
-  st.write('Child is autistic')
-else:
-  st.write('Child is not autistic')
+if st.button('Predict'):
+    a = log_reg.predict([arr])
+    if(a == 1):
+      st.write('Child is autistic')
+    else:
+      st.write('Child is not autistic')
