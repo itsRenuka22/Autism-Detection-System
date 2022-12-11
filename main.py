@@ -178,7 +178,7 @@ if a == 'Yes':
 else:
     arr.append(0)
 
-option = st.selectbox('Which Algorithm do you want to use?',
+option = st.selectbox('Which Algorithm do you want to use? (For Research Purpose Only)',
                       ("Logistic Regression", "Decision Tree Classifier", "K-Nearest "
                                                                           "Neighbors "
                                                                           "Classifier"))
