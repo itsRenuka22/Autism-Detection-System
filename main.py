@@ -15,6 +15,10 @@ import pydotplus
 from sklearn.neighbors import KNeighborsClassifier
 import warnings
 
+st.set_page_config(
+        page_title="Autism Detection System",
+)
+
 warnings.filterwarnings(action='ignore', category=UserWarning)
 st.title("Autism Detection System")
 le = LabelEncoder()
@@ -195,3 +199,4 @@ if st.button('Predict'):
         st.write('Child is autistic')
     else:
         st.write('Child is not autistic')
+st.write("[Check out this link for more information about Autism](https://vibodhbhosure.github.io/Secondary-Site-for-Autism-System/)")
