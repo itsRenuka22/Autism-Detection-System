@@ -15,8 +15,8 @@ import pydotplus
 from sklearn.neighbors import KNeighborsClassifier
 import warnings
 
-static count = 0
-count+= 1
+
+
 st.set_page_config(
     page_title="Autism Detection System",
 )
@@ -211,4 +211,4 @@ if st.button('Predict'):
         st.write('Child is not autistic')
 st.write("[Check out this link for more information about Autism]("
          "https://vibodhbhosure.github.io/Secondary-Site-for-Autism-System/)")
-st.write("Total number of people who have used this system: ", count)
+
