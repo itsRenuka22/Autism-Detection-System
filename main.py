@@ -16,7 +16,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import warnings
 
 st.set_page_config(
-        page_title="Autism Detection System",
+    page_title="Autism Detection System",
 )
 
 warnings.filterwarnings(action='ignore', category=UserWarning)
@@ -186,17 +186,26 @@ option = st.selectbox('Which Algorithm do you want to use? (For Research Purpose
                       ("Logistic Regression", "Decision Tree Classifier", "K-Nearest "
                                                                           "Neighbors "
                                                                           "Classifier"))
+# Send this data in the api as string
+datatosend = ','.join(str(e) for e in arr)
+# datatosend = datatosend.split(",")
+# datatosend = [int(x) for x in datatosend]
+
 st.write('You selected:', option)
 if option == 'Logistic Regression':
     a = log_reg.predict([arr])
+    # print(datatosend)
 elif option == 'Decision Tree Classifier':
     a = clf.predict([arr])
+    # print(datatosend)
 else:
     a = knn.predict([arr])
+    # print(datatosend)
 
 if st.button('Predict'):
     if a == 1:
         st.write('Child is autistic')
     else:
         st.write('Child is not autistic')
-st.write("[Check out this link for more information about Autism](https://vibodhbhosure.github.io/Secondary-Site-for-Autism-System/)")
+st.write("[Check out this link for more information about Autism]("
+         "https://vibodhbhosure.github.io/Secondary-Site-for-Autism-System/)")
